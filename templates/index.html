@@ -90,6 +90,27 @@
             border-radius: 3px;
         }
 
+        .data-source {
+            text-align: left;
+            color: var(--text-light);
+            font-size: 13px;
+            margin: 30px 0;
+            font-weight: 400;
+            font-style: italic;
+            padding-left: 4px;
+        }
+
+        .data-source a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .data-source a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
         form label {
             display: block;
             margin-top: 20px;
@@ -473,6 +494,11 @@
             <div class="input-group">
                 <label for="end_date">结束日期：</label>
                 <input type="text" name="end_date" id="end_date" placeholder="YYYY-MM-DD 例如 2024-05-10" required>
+            </div>
+
+            <div class="data-source">
+                数据来源：ECMWF (欧洲中期天气预报中心), ERA5数据集, 
+                <a href="https://www.ecmwf.int/" target="_blank">https://www.ecmwf.int/</a>
             </div>
 
             <input type="submit" value="查询天气数据">
